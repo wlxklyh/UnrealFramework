@@ -42,8 +42,8 @@ private:
 public:
 	bool				bIsFree = false;
 protected:
-	FIndexBufferRHIRef	IndexBufferRHI;
-	FVertexBufferRHIRef	VertexBufferRHI;
+	FBufferRHIRef	IndexBufferRHI;
+	FBufferRHIRef	VertexBufferRHI;
 	int32				NumVertices = 0;
 	int32				NumTriangles = 0;
 	ImDrawVert*			VtxBuf = nullptr;

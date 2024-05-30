@@ -109,7 +109,7 @@ void FImguiDrawer::_UpdateBufferSize(int32 InVtxNum, int32 InIdxNum)
 	if (InVtxNum > NumVertices)
 	{
 		auto VtxBufSize = sizeof(ImDrawVert) * InVtxNum;
-        VertexBufferRHI = RHICreateVertexBuffer(VtxBufSize, BUF_Dynamic, CreateInfo);
+        VertexBufferRHI = FRHICommandListExecutor::GetImmediateCommandList().CreateVertexBuffer(VtxBufSize, BUF_Dynamic, CreateInfo);
 		if (VtxBuf)
 		{
 			FMemory::Free(VtxBuf);
@@ -121,7 +121,7 @@ void FImguiDrawer::_UpdateBufferSize(int32 InVtxNum, int32 InIdxNum)
 	{
 		auto IdxBufSize = sizeof(ImDrawIdx) * InIdxNum;
 		check(InIdxNum % 3 == 0);
-		IndexBufferRHI = RHICreateIndexBuffer(sizeof(ImDrawIdx), IdxBufSize, BUF_Dynamic, CreateInfo);
+		IndexBufferRHI = FRHICommandListExecutor::GetImmediateCommandList().CreateIndexBuffer(sizeof(ImDrawIdx), IdxBufSize, BUF_Dynamic, CreateInfo);
 		if (IdxBuf)
 		{
 			FMemory::Free(IdxBuf);
@@ -186,8 +186,8 @@ FRHITexture2D* FImguiDrawer::_GetTextureFromID(ImTextureID InID)
 {
 	if (!InID) return nullptr;
 	auto ImResource = UImguiResourceManager::Get().FindResource(InID);
-	if (!ImResource || !ImResource->Source || !ImResource->Source->Resource) return nullptr;
-	return ImResource->Source->Resource->TextureRHI->GetTexture2D();
+	if (!ImResource || !ImResource->Source || !ImResource->Source->GetResource()) return nullptr;
+	return ImResource->Source->GetResource()->TextureRHI->GetTexture2D();
 }
 
 TSharedPtr<FImguiDrawer, ESPMode::ThreadSafe> FImguiDrawer::AllocDrawer()
@@ -221,14 +221,14 @@ void FImguiDrawer::DrawRenderThread(FRHICommandListImmediate& RHICmdList, const 
 	// copy data
 	auto VtxBufSize = NumVertices * sizeof(ImDrawVert);
 	auto IdxBufSize = NumTriangles * 3 * sizeof(ImDrawIdx);
-	ImDrawVert* RHIVtxBuf = (ImDrawVert*)RHILockVertexBuffer(VertexBufferRHI, 0, VtxBufSize, EResourceLockMode::RLM_WriteOnly);
-	ImDrawIdx*  RHIIdxBuf = (ImDrawIdx*)RHILockIndexBuffer(IndexBufferRHI, 0, IdxBufSize, EResourceLockMode::RLM_WriteOnly);
+	ImDrawVert* RHIVtxBuf = (ImDrawVert*)FRHICommandListExecutor::GetImmediateCommandList().LockBuffer(VertexBufferRHI, 0, VtxBufSize, EResourceLockMode::RLM_WriteOnly);
+	ImDrawIdx*  RHIIdxBuf = (ImDrawIdx*)FRHICommandListExecutor::GetImmediateCommandList().LockBuffer(IndexBufferRHI, 0, IdxBufSize, EResourceLockMode::RLM_WriteOnly);
 
 	FMemory::Memcpy(RHIVtxBuf, VtxBuf, VtxBufSize);
 	FMemory::Memcpy(RHIIdxBuf, IdxBuf, IdxBufSize);
 	
-	RHIUnlockVertexBuffer(VertexBufferRHI);
-	RHIUnlockIndexBuffer(IndexBufferRHI);
+	FRHICommandListExecutor::GetImmediateCommandList().UnlockBuffer(VertexBufferRHI);
+	FRHICommandListExecutor::GetImmediateCommandList().UnlockBuffer(IndexBufferRHI);
 	
 	// get render target 
 	FTexture2DRHIRef* RT = (FTexture2DRHIRef*)RenderTarget;
@@ -238,8 +238,8 @@ void FImguiDrawer::DrawRenderThread(FRHICommandListImmediate& RHICmdList, const 
 	RHICmdList.BeginRenderPass(PassInfo, TEXT("DrawImguiMesh"));
 	
 	// get shader
-	TShaderMapRef<FImguiShaderVs> Vs(GetGlobalShaderMap(ERHIFeatureLevel::SM5));
-	TShaderMapRef<FImguiShaderPs> Ps(GetGlobalShaderMap(ERHIFeatureLevel::SM5));
+	TShaderMapRef<FImguiShaderVs> Vs(GetGlobalShaderMap(ERHIFeatureLevel::SM6));
+	TShaderMapRef<FImguiShaderPs> Ps(GetGlobalShaderMap(ERHIFeatureLevel::SM6));
 
 	// setup PSO
 	FGraphicsPipelineStateInitializer PSOInitializer;

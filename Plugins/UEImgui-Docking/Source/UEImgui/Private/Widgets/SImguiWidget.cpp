@@ -20,7 +20,7 @@ void SImguiRenderProxy::Construct(const FArguments& InArgs)
 	bBlockInput = InArgs._BlockInput;
 	bBlockWheel = InArgs._BlockWheel;
 
-	Visibility = InArgs._Visibility;
+	SetVisibility(InArgs._Visibility);
 }
 
 void SImguiRenderProxy::SetContext(UImguiContext* InContext)
@@ -133,7 +133,7 @@ int32 SImguiRenderProxy::OnPaint(
 	CachedWnd = StaticCastSharedRef<SWindow>(OutDrawElements.GetPaintWindow()->AsShared());
 	
 	// get vertex offset
-	FVector2D ImguiVertexOffset = AllottedGeometry.GetAbsolutePosition() - *(FVector2D*)&BoundViewport->Pos;
+	FVector2D ImguiVertexOffset = AllottedGeometry.GetAbsolutePosition() - FVector2D{ BoundViewport->Pos.x, BoundViewport->Pos.y };
 
 	// build ortho matrix 
 	auto Size = OutDrawElements.GetPaintWindow()->GetSizeInScreen();
@@ -185,7 +185,7 @@ void SImguiRenderProxy::Tick(const FGeometry& AllottedGeometry, const double InC
 	FVector2D Pos = AllottedGeometry.GetAbsolutePosition();
 	if (bAutoSetWidgetPos)
 	{
-		Wnd->Pos = *(ImVec2*)&Pos;
+		Wnd->Pos = { (float)Pos.X, (float)Pos.Y };
 	}
 }
 

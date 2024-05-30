@@ -38,8 +38,8 @@ void UImguiContext::Init(TSharedPtr<IImguiViewport> InMainViewPort, ImFontAtlas*
 	ImMainViewPort->PlatformHandle = ImMainViewPort->PlatformHandleRaw = InMainViewPort.Get();
 
 	// setup main client size
-	auto MainViewPortSize = InMainViewPort->GetSize();
-	GetIO()->DisplaySize = *(ImVec2*)&MainViewPortSize;
+	auto MainViewPortSize = FVector2f(InMainViewPort->GetSize());
+	GetIO()->DisplaySize = { MainViewPortSize.X, MainViewPortSize.Y };
 
 	// add to search map
 	ImViewportToUE.Add(ImMainViewPort, MainViewPort);
@@ -53,8 +53,8 @@ void UImguiContext::UpdateSize()
 	}
 
 	// setup main client size
-	auto MainViewPortSize = MainViewPort->GetSize();
-	GetIO()->DisplaySize = *(ImVec2*)&MainViewPortSize;
+	auto MainViewPortSize = FVector2f(MainViewPort->GetSize());
+	GetIO()->DisplaySize = { MainViewPortSize.X, MainViewPortSize.Y };
 }
 
 void UImguiContext::ShutDown()
@@ -308,23 +308,23 @@ void UImguiContext::_UpdateWindow(ImGuiViewport* viewport)
 ImVec2 UImguiContext::_GetWindowPos(ImGuiViewport* viewport)
 {
 	auto Pos = _SafeFindViewport(viewport)->GetPos();
-	return *(ImVec2*)&Pos;
+	return { (float)Pos.X, (float)Pos.Y };
 }
 
 void UImguiContext::_SetWindowPos(ImGuiViewport* viewport, ImVec2 pos)
 {
-	_SafeFindViewport(viewport)->SetPos(*(FVector2D*)&pos);
+	_SafeFindViewport(viewport)->SetPos({ pos.x, pos.y });
 }
 
 ImVec2 UImguiContext::_GetWindowSize(ImGuiViewport* viewport)
 {
 	auto Size = _SafeFindViewport(viewport)->GetSize();
-	return *(ImVec2*)&Size;
+	return { (float)Size.X, (float)Size.Y };
 }
 
 void UImguiContext::_SetWindowSize(ImGuiViewport* viewport, ImVec2 size)
 {
-	_SafeFindViewport(viewport)->SetSize(*(FVector2D*)&size);
+	_SafeFindViewport(viewport)->SetSize({ size.x, size.y });
 }
 
 void UImguiContext::_SetWindowFocus(ImGuiViewport* viewport)
