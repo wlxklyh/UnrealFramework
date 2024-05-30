@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "DIMl8dkjKffcwcBNtw+i03YVh3vs290ravQA01M9YO2Oltx44cgKIV6KzxcTH+mZBhU0atL1Ag7BdLTg8hBtSg==",
+  "dgSpecHash": "s7p5oPeP2DSHFopZzpW57WYRdNxJFNzBZOkxBIJfkcdestHAB5WLCFy0QyuuUZgWAOuwhJF5AvnPPEZCmegNFw==",
   "success": true,
   "projectFilePath": "F:\\myworkspace\\github\\UnrealFramework\\Plugins\\Puerts\\Source\\CSharpParamDefaultValueMetas\\CSharpParamDefaultValueMetas.ubtplugin.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\NH50\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+    "C:\\Users\\NH50\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\NH50\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.30\\microsoft.windowsdesktop.app.ref.6.0.30.nupkg.sha512",
+    "C:\\Users\\NH50\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.30\\microsoft.netcore.app.ref.6.0.30.nupkg.sha512",
+    "C:\\Users\\NH50\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.30\\microsoft.aspnetcore.app.ref.6.0.30.nupkg.sha512"
   ],
   "logs": []
 }
