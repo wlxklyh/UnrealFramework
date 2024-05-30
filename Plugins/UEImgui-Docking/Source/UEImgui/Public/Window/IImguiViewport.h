@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "CoreMinimal.h"
 #include "imgui.h"
+#include "Runtime/SlateCore/Public/Widgets/SWindow.h"
 
 class UImguiInputAdapter;
 class UImguiContext;
