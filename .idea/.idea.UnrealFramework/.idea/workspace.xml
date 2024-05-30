@@ -11,7 +11,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e56fb35e-3ba7-4a45-a7ff-ab114e1d4806" name="Changes" comment="[Puerts] 加入插件" />
+    <list default="true" id="e56fb35e-3ba7-4a45-a7ff-ab114e1d4806" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnrealFramework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnrealFramework/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Puerts/Source/CSharpParamDefaultValueMetas/obj/Debug/CSharpParamDefaultValueMetas.ubtplugin.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Puerts/Source/CSharpParamDefaultValueMetas/obj/Debug/CSharpParamDefaultValueMetas.ubtplugin.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Puerts/Source/CSharpParamDefaultValueMetas/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Puerts/Source/CSharpParamDefaultValueMetas/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Puerts/Source/CSharpParamDefaultValueMetas/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Puerts/Source/CSharpParamDefaultValueMetas/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/UEImgui-Docking/Source/UEImgui/Public/Window/IImguiViewport.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/UEImgui-Docking/Source/UEImgui/Public/Window/IImguiViewport.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,9 +29,13 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../UnrealEngine/Engine/Source/ThirdParty/mimalloc/2.0.0/src/alloc.c" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Plugins/Puerts/ThirdParty/Include/asio/asio/ip/impl/address.hpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Plugins/UEImgui-Docking/Examples/Example.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Plugins/UEImgui-Docking/Source/ThirdParty/Imgui/Private/imgui.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Plugins/UEImgui-Docking/Source/ThirdParty/Imgui/Public/imconfig.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Plugins/UEImgui-Docking/Source/ThirdParty/Imgui/Public/imgui.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Plugins/UEImgui-Docking/Source/ThirdParty/Imgui/Public/imgui_internal.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -2728,7 +2738,8 @@
       <workItem from="1716310744571" duration="201000" />
       <workItem from="1716316531017" duration="1268000" />
       <workItem from="1716320823366" duration="7345000" />
-      <workItem from="1717075940571" duration="1102000" />
+      <workItem from="1717075940571" duration="7054000" />
+      <workItem from="1717093526208" duration="451000" />
     </task>
     <task id="LOCAL-00001" summary="[Puerts] 加入插件">
       <option name="closed" value="true" />
@@ -2738,7 +2749,95 @@
       <option name="project" value="LOCAL" />
       <updated>1717076561081</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="[UEClassDraw] 插件">
+      <option name="closed" value="true" />
+      <created>1717088986296</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717088986297</updated>
+    </task>
+    <task id="LOCAL-00003" summary="[Res] 资源">
+      <option name="closed" value="true" />
+      <created>1717089013879</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717089013879</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[Puerts] 导出">
+      <option name="closed" value="true" />
+      <created>1717089038155</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717089038155</updated>
+    </task>
+    <task id="LOCAL-00005" summary="[idea]">
+      <option name="closed" value="true" />
+      <created>1717089050365</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717089050365</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[Puerts] 导出">
+      <option name="closed" value="true" />
+      <created>1717089989812</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717089989812</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[UEImgui] 插件 https://github.com/ZhuRong-HomoStation/UEImgui">
+      <option name="closed" value="true" />
+      <created>1717090560302</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717090560302</updated>
+    </task>
+    <task id="LOCAL-00008" summary="[UEImgui] 插件 merge issue:https://github.com/ZhuRong-HomoStation/UEImgui/issues/17 + 两个编译错误fix">
+      <option name="closed" value="true" />
+      <created>1717090949396</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717090949396</updated>
+    </task>
+    <task id="LOCAL-00009" summary="[UEImgui] fix">
+      <option name="closed" value="true" />
+      <created>1717091065291</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717091065291</updated>
+    </task>
+    <task id="LOCAL-00010" summary="[UEImgui] 插件 merge issue:https://github.com/ZhuRong-HomoStation/UEImgui/issues/17 原始fix">
+      <option name="closed" value="true" />
+      <created>1717091080947</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717091080947</updated>
+    </task>
+    <task id="LOCAL-00011" summary="[UEImgui] 去掉assert fix">
+      <option name="closed" value="true" />
+      <created>1717092460762</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717092460762</updated>
+    </task>
+    <task id="LOCAL-00012" summary="[Puerts] 导出">
+      <option name="closed" value="true" />
+      <created>1717092496567</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717092496567</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -2782,6 +2881,15 @@
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="[Puerts] 加入插件" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Puerts] 加入插件" />
+    <MESSAGE value="[UEClassDraw] 插件" />
+    <MESSAGE value="[Res] 资源" />
+    <MESSAGE value="[idea]" />
+    <MESSAGE value="[UEImgui] 插件 https://github.com/ZhuRong-HomoStation/UEImgui" />
+    <MESSAGE value="[UEImgui] 插件 merge issue:https://github.com/ZhuRong-HomoStation/UEImgui/issues/17 + 两个编译错误fix" />
+    <MESSAGE value="[UEImgui] fix" />
+    <MESSAGE value="[UEImgui] 插件 merge issue:https://github.com/ZhuRong-HomoStation/UEImgui/issues/17 原始fix" />
+    <MESSAGE value="[UEImgui] 去掉assert fix" />
+    <MESSAGE value="[Puerts] 导出" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Puerts] 导出" />
   </component>
 </project>
