@@ -1,0 +1,3 @@
+[submodule "Plugins/UEClassExport"]
+	path = Plugins/UEClassExport
+	url = https://github.com/wlxklyh/UEClassExport.git
