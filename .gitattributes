@@ -1,7 +1,0 @@
-*.lib filter=lfs diff=lfs merge=lfs -text
-Plugins/Puerts/ThirdParty/v8/Lib/Win32/wee8.lib filter=lfs diff=lfs merge=lfs -text
-Plugins/Puerts/ThirdParty/v8/Lib/Win64MD/wee8.lib filter=lfs diff=lfs merge=lfs -text
-Plugins/Puerts/ThirdParty/v8/Lib/Win64/wee8.lib filter=lfs diff=lfs merge=lfs -text
-Plugins/Puerts/ThirdParty/Library/ffi/Win64/ffi.lib filter=lfs diff=lfs merge=lfs -text
-Plugins/Puerts/ThirdParty/v8/Lib/Win64DLL/v8.dll.lib filter=lfs diff=lfs merge=lfs -text
-Plugins/Puerts/ThirdParty/v8/Lib/Win64DLL/v8_libplatform.dll.lib filter=lfs diff=lfs merge=lfs -text
