@@ -9,7 +9,7 @@ struct  FAnimNode_Custom: public FAnimNode_SequencePlayerBase
 GENERATED_BODY()
 
 public:
-	friend class UAnimGraphNode_SequencePlayer;
+	friend class UAnimGraphNode_Custom;
 
 #if WITH_EDITORONLY_DATA
 	// The group name that we synchronize with (NAME_None if it is not part of any group). 
