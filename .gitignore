@@ -75,3 +75,10 @@ Plugins/*/Intermediate/*
 DerivedDataCache/*
 /Config/ImguiLayout_Engine.ini
 .idea
+/Plugins/Puerts/Source/CSharpParamDefaultValueMetas/obj/Debug/CSharpParamDefaultValueMetas.ubtplugin.assets.cache
+/Plugins/Puerts/Source/CSharpParamDefaultValueMetas/obj/Debug/CSharpParamDefaultValueMetas.ubtplugin.csproj.AssemblyReference.cache
+/Plugins/Puerts/Source/CSharpParamDefaultValueMetas/obj/CSharpParamDefaultValueMetas.ubtplugin.csproj.nuget.dgspec.json
+/Plugins/Puerts/Source/CSharpParamDefaultValueMetas/obj/project.assets.json
+/Plugins/Puerts/Source/CSharpParamDefaultValueMetas/obj/project.nuget.cache
+/Plugins/Puerts/Source/CSharpParamDefaultValueMetas/obj/project.packagespec.json
+/Plugins/Puerts/Source/CSharpParamDefaultValueMetas/obj/rider.project.restore.info
