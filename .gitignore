@@ -82,3 +82,5 @@ DerivedDataCache/*
 /Plugins/Puerts/Source/CSharpParamDefaultValueMetas/obj/project.nuget.cache
 /Plugins/Puerts/Source/CSharpParamDefaultValueMetas/obj/project.packagespec.json
 /Plugins/Puerts/Source/CSharpParamDefaultValueMetas/obj/rider.project.restore.info
+/Plugins/Puerts/Source/CSharpParamDefaultValueMetas/obj/CSharpParamDefaultValueMetas.ubtplugin.csproj.nuget.g.props
+/Plugins/Puerts/Source/CSharpParamDefaultValueMetas/obj/rider.project.model.nuget.info
